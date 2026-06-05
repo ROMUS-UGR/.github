@@ -1,7 +1,7 @@
 # ROMUS
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ROMUS-UGR/ROMUS/main/images/logo_romus.png" width="180">
+  <img src="./logo_romus.png" width="180">
 </p>
 
 ## About
