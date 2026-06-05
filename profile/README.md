@@ -1,50 +1,37 @@
-Documentacion de ROMUS
-# Romus – Asistente Virtual Offline (TFG)
+# ROMUS
+
 <p align="center">
-  <img src="logo_romus.png" alt="ROMUS Logo" width="300">
+  <img src="https://raw.githubusercontent.com/ROMUS-UGR/ROMUS/main/images/logo_romus.png" width="180">
 </p>
 
+## About
 
-Este proyecto corresponde a un **Trabajo Fin de Grado (TFG)** y consiste en el desarrollo de un **asistente virtual completamente offline**, basado en modelos de lenguaje locales (LLMs), con soporte para **RAG (Retrieval-Augmented Generation)** y **análisis de imágenes**, integrando backend, frontend y despliegue mediante Docker.
+ROMUS is a private virtual assistant developed as a Bachelor's Thesis project at the University of Granada.
 
----
+The project explores the feasibility of deploying Large Language Models locally while preserving privacy, data ownership and organizational control.
 
-## Características principales
+ROMUS combines:
 
-- Ejecución **100% local y offline**
-- Modelos de lenguaje locales mediante **Ollama**
-- Chat conversacional con historial persistente
-- Soporte para documentos (PDF/TXT) mediante RAG
-- Soporte para imágenes (visión)
-- Backend en **FastAPI**
-- Frontend en **React + TypeScript**
-- Persistencia con base de datos local
-- Despliegue reproducible con **Docker y Docker Compose**
+- Local LLM execution through Ollama
+- Retrieval-Augmented Generation (RAG)
+- ChromaDB vector storage
+- FastAPI backend
+- React + TypeScript frontend
+- Docker-based deployment
 
----
+## Main Goals
 
-## Requisitos
+- Keep sensitive information inside controlled infrastructure
+- Avoid dependency on external AI providers
+- Enable consultation of internal knowledge bases
+- Provide traceability through RAG mechanisms
 
-- Docker
-- Docker Compose
+## Repository
 
-No es necesario instalar Python, Node.js ni dependencias adicionales en el sistema.
+Main repository:
 
----
+https://github.com/ROMUS-UGR/ROMUS
 
-## Clonado del proyecto
+## License
 
-Para descargar el proyecto completo:
-
-```bash
-git clone https://github.com/ROMUS-UGR/Romus.git
-
-```
-Y En la carpeta padre, poner:
-```bash
-docker compose up --build
-```
-El primer arranque será lento, porque te baja los modelos y todas las dependencias, sé paciente.
-
-## Nota Importante
-No he creado un .env, para que el que quisiera pudiera probar la aplicación solo haciendo git clone, pero eso conlleva a que la firma de jwt esté hardcodeada y también el correo para la recuperación de contraseña. Lo he decidido así porque es un prototipo, evidentemente esto se debería de cambiar a un .env si alguna empresa o persona me compraría la aplicación.
+This project is distributed under the GNU General Public License v3.0 (GPLv3).
